@@ -38,7 +38,7 @@
                     <div class="position-relative " style="height:350px;">
 						<div class="chat-messages p-4">
                         <% @messages.each do |message|%>
-							<div class="chat-message-right pb-4">
+							<div class="chat-message-right pb-4 " id ="haha">
 								<div>
 									<img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40">
 									<div class="text-muted small text-nowrap mt-2">2:34 am</div>
@@ -51,7 +51,7 @@
 						<%end%>
 							
                         </div>
-                    </div><%= form_for(@message , url: message_path) do |f| %>
+                    </div><%= form_for(@message , url: message_path, remote: true) do |f| %>
                     <div class="flex-grow-0 py-3 px-4 border-top">
 					
 						<div class="input-group">
