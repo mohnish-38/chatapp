@@ -1,0 +1,40 @@
+
+  <div class="container py-3 h-75">
+    <div class="row d-flex justify-content-center align-items-center ">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body  text-center">
+
+            <div class="  pb-5">
+
+              <h3>Let's<b>Chat</b></h3>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+            <%= form_for(:session, url: login_path) do |f|%>
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typeEmailX"><%= f.text_field :username, placeholder: "Username", class: "form-control form-control-lg"%>
+                </label>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typePasswordX"><%= f.password_field :password, placeholder: "Password", class: "form-control form-control-lg"%>
+                </label>
+              </div>
+
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+              
+              <%= f.button "Login", class: "btn btn-outline-light btn-lg px-5" %>
+
+            <%end%>
+
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

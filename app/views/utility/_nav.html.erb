@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+	<a href="#" class="navbar-brand"><i class="fa fa-cube"></i>Let's<b>Chat</b></a>
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<div class="navbar-nav">
+			<a href="<%= root_path%>" class="nav-item nav-link active">Home</a>
+			<a href="#" class="nav-item nav-link">About</a>
+			
+			<a href="#" class="nav-item nav-link">Blog</a>
+			<a href="#" class="nav-item nav-link">Contact</a>
+		</div>
+		
+	</div>
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-end">
+	<% if !logged_in?%>
+		<div class="navbar-nav">
+			<a href="<%=login_path%>" class="nav-item nav-link active">Login</a>
+			<a href="#" class="nav-item nav-link">Sign up</a>
+		</div>
+	<% else %>
+	    <div class="navbar-nav">
+			<a href="<%=logout_path%>" class="nav-item nav-link active">Logout</a>
+			
+		</div>
+	<%end%>
+	</div>
+
+</nav>
